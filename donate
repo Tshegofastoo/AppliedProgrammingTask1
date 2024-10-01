@@ -1,0 +1,34 @@
+<div class="Donate">
+
+    @if (Model.hasData)
+    {
+        @if (TempData["Money"]!=null)
+        {
+            <h4 align="center">@TempData["Money"]</h4>
+        }
+        
+    }
+    <h1 align="center">Donate Money</h1>
+
+    <div class="container">
+        <form method="post">
+            <label for="fDate">Date of Contribution</label>
+            <input type="datetime-local" id="fDate" name="fDate" required />
+
+            <label for="fAmount">Amount to Contribute</label>
+            <input type="number" id="fAmount" name="fAmount" placeholder="20000" required />
+
+            <label for="fAno">Would you like your identity to stay confidential?</label>
+            <select id="fAno" name="fAno" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="fComment">Comment</label>
+            <textarea id="fComment" name="fComment" placeholder="Say Something.." style="height:200px"></textarea>
+
+            <input type="submit" name="btnDonate" value="Donate">
+        </form>
+    </div>
+
+</div>
