@@ -1,0 +1,16 @@
+<section id="hero">
+
+    <div class="hero-text" data-aos="zoom-out">
+
+        <br><br><br><br><br><br>
+        <h2>Supporting Communities in Reconstruction and Recovery</h2>
+        <p>
+            Our mission is to deliver effective and compassionate disaster relief<br>
+            ensuring that every community receives support during times of crisis..
+        </p>
+        <a asp-area="" asp-page="/Donate_Money" class="btn-get-started scrollto">Get Started</a>
+    </div>
+
+
+
+</section>
