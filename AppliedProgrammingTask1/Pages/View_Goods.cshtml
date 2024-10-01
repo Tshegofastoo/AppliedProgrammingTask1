@@ -1,0 +1,26 @@
+﻿@page
+@model AppliedProgrammingTask1.Pages.View_GoodsModel
+@{
+}
+<h4>@Model.hasData</h4>
+<table class="customers">
+    <tr>
+        <th>Row-Number</th>
+        <th>Item Number      </th>
+        <th>Category</th>
+        <th>Capture Category</th>
+        <th>Item Date</th>
+    </tr>
+    <tbody>
+        @foreach (var list in Model.getClass)
+        {
+            <tr>
+                <td>@list.getRow()</td>
+                <td>@list.getNumber()</td>
+                <td>@list.getCategory()</td>
+                <td>@list.getNewCategory()</td>
+                <td>@list.getDate()</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿@page
+@model AppliedProgrammingTask1.Pages.View_Donate_MoneyModel
+@{
+}
+<h4>@Model.hasData</h4>
+<table class="customers">
+    <tr>
+        <th>Row-Number</th>
+        <th>Donation Date</th>
+        <th>Donation Amount</th>
+        <th>Anonymous</th>
+        <th>Comment</th>
+    </tr>
+    <tbody>
+        @foreach (var list in Model.getClass)
+        {
+            <tr>
+                <td>@list.getRow()</td>
+                <td>@list.getDate()</td>
+                <td>@list.getAmount()</td>
+                <td>@list.getAnonymous()</td>
+                <td>@list.getComment()</td>
+            </tr>
+        }
+    </tbody>
+</table>

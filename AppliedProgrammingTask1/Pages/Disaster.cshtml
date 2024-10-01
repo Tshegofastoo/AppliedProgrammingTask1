@@ -1,0 +1,60 @@
+﻿@page
+@model AppliedProgrammingTask1.Pages.DisasterModel
+@{
+}
+
+<div class="Disaster">
+
+
+    <h1 align="center">Disaster</h1>
+
+    @if (Model.hasData)
+    {
+        @if (@TempData["dis"]!=null)
+        {
+            <h4 align="center">@TempData["dis"]</h4>
+        }
+    }
+    <div class="container">
+        <form method="post">
+
+            <label for="aid">Is the disaster currently happening?</label>
+            <select id="aid" name="aid" required>
+                <option value="Water">Yes</option>
+                <option value="Food">No</option>
+               
+            </select>
+
+            <label for="SDate">Date the Disaster Began</label>
+            <input type="datetime-local" id="SDate" name="SDate" />
+
+            <label for="EDate">Date the Disaster END</label>
+            <input type="datetime-local" id="EDate" name="EDate" />
+
+            <label for="txtAddress">Place Of the  Disaster</label>
+            <input type="text" id="txtAddress" name="txtAddress" placeholder="Pretoria" required />
+
+            <label for="txtDescription">Details</label>
+            <textarea id="txtDescription" name="txtDescription" placeholder="Say Something.." style="height:200px" required></textarea>
+
+            <label for="aid">Required Type OF Aid Needed</label>
+            <select id="aid" name="aid" required>
+                <option value="Water">Water</option>
+                <option value="Food">Food</option>
+                <option value="Shelter">Shelter</option>
+                <option value="Medical Supplies">Medical Supplies</option>
+                <option value="Search and Rescue">Search and Rescue</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Donations">Donations</option>
+                <option value="Volunteer Assistance">Volunteer Assistance</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="txtNewAid">Please provide details on support required if 'Other' is selected.</label>
+            <input type="text" id="txtNewAid" name="txtNewAid" placeholder="Donation" />
+
+            <input type="submit" name="btnCapture" value="Capture Data">
+        </form>
+    </div>
+
+</div>

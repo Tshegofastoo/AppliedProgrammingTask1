@@ -1,0 +1,43 @@
+﻿@page
+@model AppliedProgrammingTask1.Pages.GoodsModel
+@{
+}
+
+<div class="Goods">
+
+    @if (Model.hasData)
+    {
+        @if (TempData["good"]!=null)
+        {
+            <h4 align="center">@TempData["good"]</h4>
+        }
+      
+    }
+
+    <h1>Goods</h1>
+
+    <div class="container">
+        <form method="post">
+
+            <label for="fDate">Date of Items</label>
+            <input type="datetime-local" id="fDate" name="fDate" />
+
+            <label for="txtNoItem">Number Of Item To Contribute</label>
+            <input type="number" id="txtNoItem" name="txtNoItem" placeholder="e.g 2" required />
+
+            <label for="Cat" class="close_">Category</label>
+            <select id="Cat" class="close_" name="Cat" required>
+                <option value="Clothes">Clothes</option>
+                <option value="Non-Perishable-Foods">Non-Perishable-Foods</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="txtNewCat">Enter New Category Name if 'Other' is selected.</label>
+            <input type="text" id="txtNewCat" name="txtNewCat" placeholder="e.g Pads" />
+
+            <input type="submit" name="btnCapture" value="Capture Data">
+        </form>
+    </div>
+
+</div>
+
